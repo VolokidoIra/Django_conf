@@ -1,0 +1,5 @@
+{
+  "name": "IraIra",
+  "age": 22,
+  "status": "+"
+}

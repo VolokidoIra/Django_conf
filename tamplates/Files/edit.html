@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма редактирования</title>
+</head>
+<body>
+    <p>{{obj.save_name}}</p>
+    <form action="{% url 'Conf:save_edit' obj.id %}" method="POST">
+        {% csrf_token %}
+        {% block content %}
+              {% if text %}
+                <textarea name="text" required placeholder="Текст файла" cols="100" rows="10" >{% for x in text %}{{x}}{% endfor %}</textarea><br>
+              {% endif %}
+        {% endblock %}
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

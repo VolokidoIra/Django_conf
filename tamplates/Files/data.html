@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    {% block content %}
+
+      {% if text %}
+            {% for x in text %}
+                <p>{{x}}</p>
+            {% endfor %}
+      {% else %}
+           Файл пуст
+      {% endif %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'Conf:new_save' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" required  placeholder="Имя файла" name="name" value="" ><br>
+        <textarea name="text" required placeholder="Текст файла" cols="100" rows="10" ></textarea><br>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>
